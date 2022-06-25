@@ -1,2 +1,0 @@
-# Pokemon-Planet-Autofarm
-yea
