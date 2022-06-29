@@ -12,9 +12,9 @@ if yeah == "begin farming":
                 auto.click(729, 639)
                 auto.keyUp('A')
                 wait.sleep(1)
-                auto.moveTo(729, 639)
+                auto.click(729, 639)
                 auto.keyDown('D')
                 wait.sleep(1)
-                auto.moveTo(729, 639)
+                auto.click(1010, 620)
                 auto.keyUp('D')
                 
