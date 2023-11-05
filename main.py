@@ -2,7 +2,6 @@ import keyboard
 import pyautogui as auto
 import time as wait
 
-
 print("Press escape to start the farm")
 
 while True:
@@ -13,10 +12,10 @@ while True:
         enabled = True
 
         while enabled:
-            fight = auto.locateCenterOnScreen('fight.png',region=(640,600,300,150), grayscale=False, confidence=0.95)
-            run = auto.locateCenterOnScreen('run.png',region=(640,600,300,150), grayscale=False, confidence=0.95)
-            elite = auto.locateCenterOnScreen('ELITE.PNG',region=(620,340,100,50), grayscale=False, confidence=0.6)
-            forgetmove = auto.locateCenterOnScreen('forget.png',region=(960,540,100,50), grayscale=False, confidence=0.7)
+            fight = auto.locateCenterOnScreen('fight.png', grayscale=False, confidence=0.91)
+            run = auto.locateCenterOnScreen('run.png', grayscale=False, confidence=0.9)
+            elite = auto.locateCenterOnScreen('ELITE.PNG', region=(620, 340, 100, 50), grayscale=False, confidence=0.6)
+            forgetmove = auto.locateCenterOnScreen('forget.png', region=(500, 600, 1000, 100), grayscale=False, confidence=0.7)
 
             def clickFight():
                 auto.click(fight)
@@ -27,13 +26,13 @@ while True:
 
             def clickForget():
                 auto.click(forgetmove)
-            
+
 
             if elite:
                 print(elite)
                 clickRun()
                 auto.leftClick()
-                
+
             elif forgetmove:
                 print(forgetmove)
                 clickForget()
@@ -47,13 +46,13 @@ while True:
                 wait.sleep(0.3)
                 auto.leftClick()
                 auto.moveTo(960, 540)
-  
-            
+
+
 
             else:
-                auto.keyDown('A')
+                auto.keyDown('W')
                 wait.sleep(0.5)
-                auto.keyUp('A')
-                auto.keyDown('D')
+                auto.keyUp('W')
+                auto.keyDown('S')
                 wait.sleep(0.5)
-                auto.keyUp('D')
+                auto.keyUp('S')
